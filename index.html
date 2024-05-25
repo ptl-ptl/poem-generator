@@ -7,38 +7,41 @@
     <title>AI Poem Generator</title>
   </head>
   <body>
-    <header>
-      <h1>Welcome to the Poem Generator</h1>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter the topic of the poem..."
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <input type="submit" value="Generate Poem" />
-      </form>
-      <div id="poem">
-        <p>
-          I come with no wrapping or pretty pink bows. <br />
-          I am who I am, from my head to my toes. <br />
-          I tend to get loud when speaking my mind. <br />
-          Even a little crazy some of the time. <br />
-        </p>
-      </div>
-    </main>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/ptl-ptl" target="_blank"> Priyal Patel</a> and
-      is
-      <a href="https://github.com/ptl-ptl/poem-generator" target="_blank">
-        open-sourced on GitHub</a
-      >
-      and is hosted on netlify.
-    </footer>
+    <div class="container">
+      <header>
+        <h1>Welcome to the Poem Generator</h1>
+      </header>
+      <main>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter the topic of the poem....."
+            autofocus
+            required
+            autocomplete="off"
+            class="inputText"
+          />
+          <input class="submit" type="submit" value="Generate Poem" />
+        </form>
+        <div class="poem">
+          <p>
+            I come with no wrapping or pretty pink bows. <br />
+            I am who I am, from my head to my toes. <br />
+            I tend to get loud when speaking my mind. <br />
+            Even a little crazy some of the time. <br />
+          </p>
+        </div>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/ptl-ptl" target="_blank"> Priyal Patel</a>
+        and is
+        <a href="https://github.com/ptl-ptl/poem-generator" target="_blank">
+          open-sourced on GitHub</a
+        >
+        and is hosted on netlify.
+      </footer>
+    </div>
 
     <script src="src/index.js"></script>
   </body>
