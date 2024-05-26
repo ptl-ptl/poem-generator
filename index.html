@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
     <title>AI Poem Generator</title>
   </head>
   <body>
@@ -12,7 +15,7 @@
         <h1>Welcome to the Poem Generator</h1>
       </header>
       <main>
-        <form>
+        <form id="poem-form">
           <input
             type="text"
             placeholder="Enter the topic of the poem....."
@@ -23,14 +26,7 @@
           />
           <input class="submit" type="submit" value="Generate Poem" />
         </form>
-        <div class="poem">
-          <p>
-            I come with no wrapping or pretty pink bows. <br />
-            I am who I am, from my head to my toes. <br />
-            I tend to get loud when speaking my mind. <br />
-            Even a little crazy some of the time. <br />
-          </p>
-        </div>
+        <div class="poem" id="display-poem"></div>
       </main>
       <footer>
         This project was coded by
@@ -39,7 +35,10 @@
         <a href="https://github.com/ptl-ptl/poem-generator" target="_blank">
           open-sourced on GitHub</a
         >
-        and is hosted on netlify.
+        and is hosted on
+        <a href="https://poems-generatorproject.netlify.app/" target="_blank"
+          >netlify</a
+        >.
       </footer>
     </div>
 
