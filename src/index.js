@@ -1,19 +1,23 @@
-function generatePoem(event) {
-  event.preventDefault();
-
+function showPoem(response) {
   new Typewriter("#display-poem", {
-    strings: "I come with no wrapping or pretty pink bows",
+    strings: response.data.answer,
     autoStart: true,
     cursor: null,
     delay: 20,
   });
+}
 
-  /*let apiKey = "67b3fe199e6a5df80a44a5o53t65b217";
-  let prompt = ;
-  let context = "You are ";
-  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;*/
+function generatePoem(event) {
+  event.preventDefault();
 
-  //xios.get(apiUrl).then(showPoem);
+  let userInputElement = document.querySelector("#user-input");
+  let apiKey = "67b3fe199e6a5df80a44a5o53t65b217";
+  let prompt = `Generate an poem on ${userInputElement.value}`;
+  let context =
+    "You are an Poem expert and loves to write short poems.Your goal is to generate a short poem of maximum 6 lines. Make sure to write the poem in basic HTML. Sign the poem with 'SheCodes AI' inside a <strong> element. Do not include a title to the poem";
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  axios.get(apiUrl).then(showPoem);
 }
 
 let poemFormElement = document.querySelector("#poem-form");
